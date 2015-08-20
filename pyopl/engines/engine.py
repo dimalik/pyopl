@@ -131,6 +131,8 @@ class Engine(object):
                 fout.write('\n')
 
         if secondary_bib:
+            if not os.path.exists(secondary_bib):
+                os.makedirs(secondary_bib)
             with file(os.path.join(
                     secondary_bib,
                     "{}.bib".format(str(uuid.uuid4()))), "w") as fout:
