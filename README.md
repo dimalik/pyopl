@@ -12,7 +12,7 @@ python setup.py install
 
 ## Dependencies
 
-Although Pyopl by itself does not have any dependencies, some search engines might. Currently, `arxiv` depends on [Nathan Grigg's `arxiv2bib`](https://github.com/nathangrigg/arxiv2bib) (for bib formatting) and `feedparser` (for reading the API).
+Although Pyopl by itself does not have any dependencies, some search engines might. Currently, `arxiv` depends on [Nathan Grigg's `arxiv2bib`](https://github.com/nathangrigg/arxiv2bib) (for bib formatting) and [`feedparser`](https://pypi.python.org/pypi/feedparser) (for reading the API).
 
 ## License
 
