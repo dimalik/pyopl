@@ -63,9 +63,6 @@ ified then the STDOUT is used.")
                         help="A bibliography directory. If this is specified a\
  separate .bib file with a unique filename is going to be created at this loca\
 tion.")
-    parser.add_argument('-l', '--line-width', type=int,
-                        default=100, help='Lines longer than -l will be trimme\
-d to -l.')
     parser.add_argument('key', type=str)
 
     args = parser.parse_args(args)
