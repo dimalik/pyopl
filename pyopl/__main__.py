@@ -63,7 +63,8 @@ ified then the STDOUT is used.")
                         help="A bibliography directory. If this is specified a\
  separate .bib file with a unique filename is going to be created at this loca\
 tion.")
-    parser.add_argument('key', type=str)
+    parser.add_argument('key', nargs="+", type=str, help="Either you search qu\
+ery or the paper identifier.")
 
     args = parser.parse_args(args)
 
@@ -76,13 +77,13 @@ tion.")
     if args.search:
         query_results = []
         for engine in used_engines:
-            query_engine = engine(args.key)
+            query_engine = engine(' '.join(args.key))
             query_results.extend(query_engine.get_items())
 
         for query_item in query_results:
             print query_item
     else:
-        engine = used_engines[0](args.key)
+        engine = used_engines[0](args.key[0])
         engine.write_bib(bib_file=args.bib,
                          secondary_bib=args.secondary_bib)
 
