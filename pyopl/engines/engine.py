@@ -139,6 +139,5 @@ class Engine(object):
                 fout.write(self.__get_citation(self.arg))
 
         if not (bib_file or secondary_bib):
-            sys.stdout.write('\n')
             sys.stdout.write(self.__get_citation(self.arg))
             sys.stdout.write('\n')
