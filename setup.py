@@ -25,7 +25,7 @@ setup(
     description="Locates and fetches academic citations in bibtex format",
     author="Dimitrios Alikaniotis",
     author_email="da352@cam.ac.uk",
-    url="http://da352.user.srcf.net",
+    url="http://github.com/dimalik/pyopl",
     packages=find_packages(),
     keywords=["arxiv", "bibtex", "latex", "citation"],
     entry_points={
@@ -39,10 +39,9 @@ setup(
     classifiers=[
         "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 2.7",
-        "Programming Language :: Python :: 3",
         "License :: OSI Approved :: BSD License",
         "Operating System :: OS Independent",
-        "Development Status :: 5 - Production/Stable",
+        "Development Status :: 4 - Beta",
         "Intended Audience :: Science/Research",
         "Topic :: Text Processing :: Markup :: LaTeX",
         "Environment :: Console"
