@@ -15,13 +15,13 @@ python setup.py install
 You can use pyopl to search online academic paper engines (current supported: crossref, arxiv) for your citation like this:
 
 ```bash
-pyopl "deep learning"
+pyopl deep learning
 ```
 
 You can also specify the engines you want to use:
 
 ```bash
-pyopl --engines=arxiv,crossref "deep learning"
+pyopl --engines=arxiv,crossref deep learning
 ```
 
 These commands default to the `--search` mode; If you want to fetch the bibtex citation you can do so like this:
