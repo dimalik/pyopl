@@ -38,7 +38,7 @@ Fetch mode defaults to displaying the citation in `STDOUT` (where you can pipe i
 pyopl --fetch --engines=arxiv --bib=/path/to/bib/file 1312.5602v1
 ```
 
-Lastly, `pyopl` offers the ability to write the citation as a file in a specified folder. This could be useful, for example, when you want to synchronize your library between different machines:
+Lastly, `pyopl` offers the ability to write the citation as a separate .bib file in a specified folder. This could be useful, for example, when you want to synchronize your library between different machines:
 
 ```bash
 pyopl --fetch --engines=arxiv --bib=/path/to/bib/file --secondary-bib=/path/to/bib/folder 1312.5602v1
