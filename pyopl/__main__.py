@@ -32,6 +32,7 @@
 
 import sys
 import argparse
+import urllib2
 
 from engines.crossref import CrossRefEngine as CrossRef
 from engines.arxiv import ArxivEngine as Arxiv
@@ -77,9 +78,12 @@ ery or the paper identifier.")
     if args.search:
         query_results = []
         for engine in used_engines:
-            query_engine = engine(' '.join(args.key))
-            query_results.extend(query_engine.get_items())
-
+            try:
+                query_engine = engine(' '.join(args.key))
+                query_results.extend(query_engine.get_items())
+            except urllib2.HTTPError:
+                print "Engine: [{}] is down at the moment.".format(
+                    engine._get_name())
         for query_item in query_results:
             print query_item
     else:
